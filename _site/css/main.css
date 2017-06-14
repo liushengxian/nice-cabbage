@@ -460,57 +460,97 @@ pre {
 Header here.
 */
 @media (min-width: 768px) {
-  .col-header {
-    color: red; }
-    .col-header .row {
-      height: 950px;
-      display: flex;
-      flex-wrap: wrap; }
-      .col-header .row .section {
-        position: relative;
-        min-height: 1px;
-        width: 20%;
-        height: 85vh;
-        flex: 1;
-        flex-grow: 1;
-        transition: all 0.4s; }
-        .col-header .row .section:hover {
-          flex-grow: 1.4; }
-        .col-header .row .section .content-holder {
-          display: flex;
-          flex-direction: column;
-          background-image: url(http://200.hc.com/wp-content/themes/hcp200/dist/images/timeline-bg.jpg);
-          height: 100%; }
-          .col-header .row .section .content-holder .icon {
-            pointer-events: none;
-            z-index: 23;
-            visibility: hidden;
-            opacity: 0;
-            -webkit-transition: visibility 0s,opacity .4s linear;
-            transition: visibility 0s,opacity .4s linear;
-            font-size: 2rem;
-            color: #212121; }
-          .col-header .row .section .content-holder .section-title {
-            padding-bottom: 0;
-            margin-top: 0;
-            padding-left: 0;
-            word-spacing: normal;
-            font-size: 3rem;
-            line-height: 75%;
-            color: #fff;
-            z-index: 20;
-            letter-spacing: 1px;
-            pointer-events: none; }
-          .col-header .row .section .content-holder .section-description {
-            color: red; }
+  body {
+    font-size: 16px;
+    line-height: 24px; }
+
+  .col-header .row {
+    height: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.4s; }
+    .col-header .row:hover > .section {
+      filter: brightness(22%);
+      transition: flex .4s,-webkit-box-flex .4s,-ms-flex .4s; }
+      .col-header .row:hover > .section:hover {
+        filter: brightness(100%);
+        transition: flex .4s,-webkit-box-flex .4s,-ms-flex .4s; }
+        .col-header .row:hover > .section:hover .explore {
+          visibility: visible;
+          opacity: 1; }
+    .col-header .row .section {
+      position: relative;
+      min-height: 1px;
+      width: 20%;
+      height: 85vh;
+      flex: 1;
+      flex-grow: 1;
+      transition: all 0.4s; }
+      .col-header .row .section:hover {
+        flex-grow: 1.4; }
+      .col-header .row .section .content-holder {
+        display: flex;
+        flex-direction: column;
+        background-image: url(http://200.hc.com/wp-content/themes/hcp200/dist/images/timeline-bg.jpg);
+        background-position: 0 50%;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        align-items: center;
+        align-content: center;
+        justify-content: center; }
+        .col-header .row .section .content-holder .icon {
+          pointer-events: none;
+          z-index: 23;
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s,opacity .4s linear;
+          font-size: 2rem;
+          color: #212121; }
+        .col-header .row .section .content-holder .section-title {
+          padding-bottom: 0;
+          margin-top: 0;
+          padding-left: 0;
+          word-spacing: normal;
+          font-size: 3vw;
+          line-height: 75%;
+          color: #fff;
+          z-index: 20;
+          letter-spacing: 1px;
+          pointer-events: none;
+          text-transform: uppercase;
+          font-family: Giorgio Sans Web; }
+        .col-header .row .section .content-holder .section-description {
+          padding: 0 5%;
+          z-index: 21;
+          width: 100%;
+          pointer-events: none;
+          font-size: 1rem;
+          color: #fff; }
+        .col-header .row .section .content-holder .explore {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s,opacity .4s linear;
+          z-index: 22;
+          pointer-events: none;
+          margin-top: 2rem; }
           .col-header .row .section .content-holder .explore a.button {
-            color: red; }
-          .col-header .row .section .content-holder .overlay {
-            background: rgba(0, 0, 0, 0.3);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%; }
-            .col-header .row .section .content-holder .overlay:hover {
-              background-color: #ee6f24; } }
+            color: #212121;
+            border-color: #212121;
+            padding: .5rem 1rem;
+            border: 3px solid #212121;
+            display: inline-block;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 0;
+            transition: all .2s linear; }
+        .col-header .row .section .content-holder .overlay {
+          background: rgba(0, 0, 0, 0.3);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all .2s linear; }
+          .col-header .row .section .content-holder .overlay:hover {
+            background-color: #ee6f24; } }

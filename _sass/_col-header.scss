@@ -2,12 +2,32 @@
 Header here.
 */
 @media (min-width: 768px){
+body{
+    font-size: 16px;
+    line-height: 24px;
+}
+
 .col-header{
-    color: red;
     .row{
         height: 950px;
         display: flex;
         flex-wrap: wrap;
+        transition: 0.4s;
+        &:hover{
+            >.section{
+                filter: brightness(22%);
+                transition: flex .4s,-webkit-box-flex .4s,-ms-flex .4s;
+                &:hover{
+                    filter: brightness(100%);
+                    transition: flex .4s,-webkit-box-flex .4s,-ms-flex .4s;
+                    .explore{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
         .section{
             position: relative;
             min-height: 1px;
@@ -23,13 +43,18 @@ Header here.
                 display: flex;
                 flex-direction: column;
                 background-image: url(http://200.hc.com/wp-content/themes/hcp200/dist/images/timeline-bg.jpg);
+                background-position: 0 50%;
                 height: 100%;
+                text-align: center;
+                cursor: pointer;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
                 .icon{
                     pointer-events: none;
                     z-index: 23;
                     visibility: hidden;
                     opacity: 0;
-                    -webkit-transition: visibility 0s,opacity .4s linear;
                     transition: visibility 0s,opacity .4s linear;
                     font-size: 2rem;
                     color: #212121;
@@ -39,19 +64,40 @@ Header here.
                     margin-top: 0;
                     padding-left: 0;
                     word-spacing: normal;
-                    font-size: 3rem;
+                    font-size: 3vw;
                     line-height: 75%;
                     color: #fff;
                     z-index: 20;
                     letter-spacing: 1px;
                     pointer-events: none;
+                    text-transform: uppercase;
+                    font-family: Giorgio Sans Web;
                 }
                 .section-description{
-                    color: red;
+                    padding: 0 5%;
+                    z-index: 21;
+                    width: 100%;
+                    pointer-events: none;
+                    font-size: 1rem;
+                    color: #fff;
                 }
                 .explore{
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: visibility 0s,opacity .4s linear;
+                    z-index: 22;
+                    pointer-events: none;
+                    margin-top: 2rem;
                     a.button{
-                        color: red;
+                        color: #212121;
+                        border-color: #212121;
+                        padding: .5rem 1rem;
+                        border: 3px solid #212121;
+                        display: inline-block;
+                        text-align: center;
+                        text-transform: uppercase;
+                        border-radius: 0;
+                        transition: all .2s linear;
                     }
                 }
                 .overlay{
@@ -61,6 +107,7 @@ Header here.
                     left: 0;
                     width: 100%;
                     height: 100%;
+                    transition: all .2s linear;
                     &:hover{
                         background-color: #ee6f24;
                     }
