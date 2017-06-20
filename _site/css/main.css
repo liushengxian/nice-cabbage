@@ -465,7 +465,7 @@ Header here.
     line-height: 24px; }
 
   .col-header .row {
-    height: 950px;
+    height: 85vh;
     display: flex;
     flex-wrap: wrap;
     transition: 0.4s; }
