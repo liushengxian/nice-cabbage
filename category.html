@@ -8,7 +8,7 @@ layout: category
         {% for post in site.posts%}
         <li>
             <!--如果有自带的图像 则使用自带的图像-->
-            <a href="{{post.url}}">
+            <a href="{{site.baseurl}}{{post.url}}">
                 {% if post.work_img %}
                 <img src="{{site.baseurl}}{{post.work_img}}" class="thumb-cover">
                 {% else %}
