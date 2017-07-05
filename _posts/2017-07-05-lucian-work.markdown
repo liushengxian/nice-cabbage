@@ -6,3 +6,4 @@ categories: jekyll work
 work_img: '/works/lucian.jpg'
 ---
 
+Lucian Got Double Kill !
