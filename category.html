@@ -10,12 +10,12 @@ layout: category
             <!--如果有自带的图像 则使用自带的图像-->
             <a href="{{post.url}}">
                 {% if post.work_img %}
-                <img src="{{post.work_img}}" class="thumb-cover">
+                <img src="{{site.baseurl}}{{post.work_img}}" class="thumb-cover">
                 {% else %}
-                <img src="/works/lulu.jpg" class="thumb-cover">
+                <img src="{{site.baseurl}}/works/lulu.jpg" class="thumb-cover">
                 {% endif %}
             </a>
-            <a href="{{post.url}}"><h2>{{post.title}}</h2></a>
+            <a href="{{site.baseurl}}{{post.url}}"><h2>{{post.title}}</h2></a>
             <p class="post-description">Hello Cabbage!</p>
         </li>
         {% endfor %}
