@@ -1,0 +1,32 @@
+.post-list{
+    ul{
+        li{
+            list-style-type: none;
+            float: left;
+            width: 280px;
+            padding: 20px 10px;
+            color: #3c383a;
+
+            img.thumb-cover{
+                width: 240px;
+                height: 240px;
+            }
+
+            a{
+                text-decoration: none;
+            }
+            h2{
+                font-size: 18px;
+                font-weight: bold;    
+                color: #3c383a;
+                &:hover{
+                    color: grey;
+                }
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}

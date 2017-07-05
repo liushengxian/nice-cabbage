@@ -1,12 +1,13 @@
 /*
 Header here.
 */
+$overlay_color: (#ee6f24,#c658e2,#7ebee4,#fbc223,#7ee48a);
+
 @media (min-width: 768px){
 body{
     font-size: 16px;
     line-height: 24px;
 }
-
 .col-header{
     .row{
         height: 85vh;
@@ -109,10 +110,20 @@ body{
                     width: 100%;
                     height: 100%;
                     transition: all .2s linear;
-                    &:hover{
-                        background-color: #ee6f24;
+                }
+            }
+
+            $i : 1;
+            @each $color in $overlay_color{
+            // select every [length of list]th table row, starting with first, second, etc
+                &:nth-child(#{length($overlay_color)}n + #{$i}){
+                    .content-holder{
+                        .overlay:hover{
+                            background-color: $color;
+                        }
                     }
                 }
+                $i: $i + 1;
             }
         }
     }

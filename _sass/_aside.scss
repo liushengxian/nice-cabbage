@@ -1,0 +1,13 @@
+.aside-bar{
+    $aside-width: 50px;
+    float: left;
+    position: fixed;
+    width: $aside-width *2;
+    left: -$aside-width;
+    height: 100%;
+    background-color: #ff00ff;
+    &:hover{
+        left: 0;
+    }
+    transition: 0.4s;
+}

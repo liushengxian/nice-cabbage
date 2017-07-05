@@ -112,16 +112,16 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
+  max-width: -webkit-calc(1000px - (30px * 2));
+  max-width: calc(1000px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px; }
   @media screen and (max-width: 800px) {
     .wrapper {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
+      max-width: -webkit-calc(1000px - (30px));
+      max-width: calc(1000px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
 
@@ -553,5 +553,43 @@ Header here.
           width: 100%;
           height: 100%;
           transition: all .2s linear; }
-          .col-header .row .section .content-holder .overlay:hover {
-            background-color: #ee6f24; } }
+      .col-header .row .section:nth-child(5n + 1) .content-holder .overlay:hover {
+        background-color: #ee6f24; }
+      .col-header .row .section:nth-child(5n + 2) .content-holder .overlay:hover {
+        background-color: #c658e2; }
+      .col-header .row .section:nth-child(5n + 3) .content-holder .overlay:hover {
+        background-color: #7ebee4; }
+      .col-header .row .section:nth-child(5n + 4) .content-holder .overlay:hover {
+        background-color: #fbc223; }
+      .col-header .row .section:nth-child(5n + 5) .content-holder .overlay:hover {
+        background-color: #7ee48a; } }
+.aside-bar {
+  float: left;
+  position: fixed;
+  width: 100px;
+  left: -50px;
+  height: 100%;
+  background-color: #ff00ff;
+  transition: 0.4s; }
+  .aside-bar:hover {
+    left: 0; }
+
+.post-list ul li {
+  list-style-type: none;
+  float: left;
+  width: 280px;
+  padding: 20px 10px;
+  color: #3c383a; }
+  .post-list ul li img.thumb-cover {
+    width: 240px;
+    height: 240px; }
+  .post-list ul li a {
+    text-decoration: none; }
+  .post-list ul li h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3c383a; }
+    .post-list ul li h2:hover {
+      color: grey; }
+  .post-list ul li p {
+    font-size: 14px; }
